@@ -1,0 +1,9 @@
+.principal_container {
+    background-image: url("../assets/background.jpg");
+    background-attachment: fixed;
+    background-size: cover; 
+    /* height:100%;     
+    padding: 0rem;
+    margin: auto; */
+
+}

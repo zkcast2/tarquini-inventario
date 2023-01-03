@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<h2 class="text-center">SECTORES</h2>
+<div *ngIf="filterResults.length === 0" class="sector_container">
+    <div routerLink="/sectores/{{sector.id}}" *ngFor="let sector of sectores" class="sector">
+        <h5 class="addtext">{{ sector.nombre }}</h5>
+    </div>
+</div>
+
+
+<div *ngIf="filterResults.length > 0">
+    <button (click)="cleanFilters()" class="btn btn-secondary m-3">Volver</button>
+    <hr />
+    <div class='filter_results'>
+        <ul>
+            <li *ngFor="let result of filterResults">
+                <a routerLink={{getRoute(result)}}>{{result.nombre ? result.nombre : result.inventario}}
+                    ({{result.Sector.nombre}})
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="filterResults.length === 0 && sectores.length === 0">
+
+    <div>
+        <div class='navigation'>
+            <h5>Fetching data from server, it may take about a minute. Please wait...</h5>
+        </div>
+
+        <div class='navigation'>
+            <img class='loadingGif' src="../../../assets/loading.gif" />
+        </div>
+    </div>
+</div>

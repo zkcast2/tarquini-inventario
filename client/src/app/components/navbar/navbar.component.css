@@ -1,0 +1,21 @@
+.navbar {
+    margin-bottom: 2rem;
+}
+
+
+.navbar-custom {
+    background-color: rgba(78, 78, 78, 0.159);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    padding: 0.6rem;
+}
+
+.verlistac:hover{
+    color: rgb(45, 45, 198)
+
+}
+
+
+.add_element_modal {
+    padding: 2rem;
+}

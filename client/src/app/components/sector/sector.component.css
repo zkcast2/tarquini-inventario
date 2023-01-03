@@ -1,0 +1,29 @@
+.botones {
+    display: flex;
+    background-color: aqua;
+    width: 100%;
+}
+
+.eliminar_button {
+    position:absolute;
+    float: right;
+    right: 15%;
+}
+
+
+.agregar_button {
+    position:absolute;
+    float: left;
+    left: 15%;
+}
+
+.accordion {
+    margin-left: 10%;
+    margin-right: 10%;
+
+    
+}
+
+.add_element_modal {
+    padding: 2rem;
+}

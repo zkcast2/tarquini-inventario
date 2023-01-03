@@ -1,0 +1,58 @@
+.divscontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 1rem;
+    padding: 2vh;
+}
+
+.leftdiv {
+    width: 25%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightdiv {
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(15px);    
+    border-radius: 1rem;
+    padding: 1.5rem;
+    overflow-y: scroll;
+    max-height: 60vh;
+    width: 75%;
+    min-height: 85vh;
+}
+
+.leftcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icon {
+    max-width: 80px;
+}
+
+ul {
+    list-style: none;
+}
+
+.cardtext {
+    padding: 0.1rem;
+}
+.textarea {
+    border-radius: 0.5rem;
+    width: 100%;
+    min-height: 15rem;
+    backdrop-filter: blur(15px);
+}
+
+.program_list {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.71);
+}

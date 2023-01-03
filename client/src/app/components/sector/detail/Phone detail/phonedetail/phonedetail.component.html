@@ -1,0 +1,132 @@
+<div class="divscontainer">
+
+    <div class="leftdiv">
+        <!-- <img class='icon' src="../../../../../assets/computer.png">
+        <h5>{{current.inventario}}</h5> -->
+        <div class="card leftcontent">
+            <!-- <h5 class="text-info">{{current.puesto}}</h5> -->
+            <img class="icon" src="../../../../../assets/phone.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-secondary text-center">Telefono</h5>
+                <hr />
+                <form [formGroup]="phone" *ngIf="phone">
+                    <div class="principal_caracts">
+                        <p class="card-text cardtext"><b>Ubicacion:</b> <input [value]="current.ubicacion" type="text"
+                                class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                                formControlName="ubicacion"> </p>
+                    </div>
+                    <div class="principal_caracts">
+                        <p class="card-text cardtext"><b>Usuario:</b> <input [value]="current.usuario" type="text"
+                                class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                                formControlName="usuario"> </p>
+                    </div>
+                    <div class="principal_caracts">
+                        <p class="card-text cardtext"><b>Marca:</b> <input [value]="current.marca" type="text"
+                                class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                                formControlName="marca"> </p>
+                    </div>
+                    <div class="principal_caracts">
+                        <p class="card-text cardtext"><b>Modelo:</b> <input [value]="current.nromodelo" type="text"
+                                class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                                formControlName="nromodelo"> </p>
+                    </div>
+                    <div class="principal_caracts">
+                        <p class="card-text cardtext"><b>Microprocesador:</b> <input [value]="current.micro" type="text"
+                                class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                                formControlName="micro"> </p>
+                    </div>
+                    <div class="principal_caracts">
+                        <p class="card-text cardtext"><b>RAM:</b> <input [value]="current.ram" type="text"
+                                class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                                formControlName="ram"> </p>
+                    </div>
+                    <div class="principal_caracts">
+                        <p class="card-text cardtext"><b>IMEI:</b> <input [value]="current.imei" type="text"
+                                class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+                                formControlName="imei"> </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button (click)="editPhone()" class="btn btn-primary">Guardar</button>
+                        <button (click)="deletePhone()" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    id: string;
+    inventario: string;
+    puesto: string;
+    ubicacion: string;
+    usuario: string;
+    marca: string;
+    nromodelo: string;
+    micro: string;
+    memoriainterna: string;
+    ram: string;
+    imei: string;
+    serie: string;
+    codigodebarras: string;
+    cfgcorreoempresa: string;
+    wpbusiness: string;
+    nrofactura: string;
+    fechafactura: string;
+    proveedor: string;
+    entregaplanilla: string;
+    versionandroid: string;
+    microsd: string;
+    fuente: string;
+    nro: string;
+    usuarioclaro: string;
+    accesorios: string;
+    cfggmail: string; -->
+
+
+    <div class="rightdiv">
+
+        <div class="infodiv">
+            <ul class="list-group">
+                <form [formGroup]="phone" *ngIf="phone">
+                    <ng-container *ngFor="let e of current | keyvalue">
+                        <div *ngIf="checkList(e.key)" class="input-group input-group-sm mb-0" style="padding: 0rem;">
+                            <div class="input-group-prepend" style="padding: 0rem;">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">{{returnName(e.key)}}</span>
+                            </div>
+                            <input [value]="e.value" type="text" class="form-control" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" [formControlName]="e.key">
+                        </div>
+                    </ng-container>
+                    <div class="observaciones mt-2">
+                        <h5>Observaciones</h5>
+                        <form [formGroup]="phone">
+                            <textarea formControlName="observaciones" class='form-control textarea'
+                                [value]="current.observaciones"></textarea>
+                        </form>
+                    </div>
+                </form>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div>
+        <div class="program_list">
+            <h5>Programas</h5>
+            <ul>
+                <div *ngFor="let programa of current.programas">
+                    <li>{{programa}}</li><button (click)="handlePrograma(programa)">x</button>
+                </div>
+                <form (submit)="handlePrograma(programa.value)">
+                    <input #programa><button type="submit">add</button>
+                </form>
+            </ul>
+        </div>
+        <hr />
+        <div class="observaciones">
+            <h5>Observaciones</h5>
+            <form [formGroup]="computer">
+                <input formControlName="observaciones" class='form-control textarea' [value]="current.observaciones">
+            </form>
+        </div>
+    </div> -->
+</div>

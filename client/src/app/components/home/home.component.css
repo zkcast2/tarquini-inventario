@@ -1,0 +1,52 @@
+.sector_container {
+    margin: 20px auto;
+    width: 90%;
+    min-height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sector {
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    max-width: calc(50% - 20px);
+    margin: 0.2rem;
+    flex: 1 1 calc(50% - 20px);
+    background-color: rgba(237, 237, 237, 0.352);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.sector:hover {
+    background-color: rgba(235, 235, 235, 0.852);
+
+}
+
+ul {
+    list-style: none;
+}
+
+.filter_results {
+    padding: 0.2rem;
+    padding-top: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(245, 245, 245, 0.148);
+    backdrop-filter: blur(10px);
+
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.loadingGif {
+    margin-top: 2rem;
+    max-width: 60px;
+}

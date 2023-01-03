@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("./assets/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;  
+    padding-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    /* margin: auto; */
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
